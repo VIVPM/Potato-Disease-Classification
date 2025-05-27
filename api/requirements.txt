@@ -5,3 +5,5 @@ fastapi
 uvicorn
 PyPDF2
 python-multipart
+tensorflow
+numpy
