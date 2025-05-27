@@ -19,7 +19,7 @@ app.add_middleware(
 )
 
 # MODEL = tf.keras.models.load_model("../saved_models/1.keras")
-endpoint = "http://localhost:8502/v1/models/potatoes_model:predict"
+endpoint = "https://potato-disease-classification-vapb.onrender.com/v1/models/potatoes_model:predict"
 CLASS_NAMES = ["Early Blight","Late Blight","Healthy"]
 
 def read_file_as_image(data) -> np.ndarray:
