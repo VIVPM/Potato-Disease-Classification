@@ -7,6 +7,7 @@ from PIL import Image
 import tensorflow as tf
 import requests
 from fastapi import Response
+import os
 app = FastAPI()
 
 app.add_middleware(
@@ -53,4 +54,10 @@ async def predict(
     
 
 if __name__ == "__main__":
-    uvicorn.run(app,host='localhost',port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=port,
+        log_level="info",
+    )
